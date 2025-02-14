@@ -1,0 +1,51 @@
+.faq_container
+{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 25%;
+    margin:  0 auto;
+    background-color: var(--secondary);
+}
+
+.accordion_item
+{
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px 20px; 
+    margin-bottom: 20px;
+    border: 0px solid transparent; 
+}
+
+
+.text
+{
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .faq_container {
+        padding: 5%;
+    }
+    
+    .secondary_title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .third_title {
+        font-size: 1rem;
+    }
+
+    .text {
+        font-size: 0.75rem;
+    }
+}

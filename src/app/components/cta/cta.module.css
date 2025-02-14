@@ -1,0 +1,64 @@
+/* CTAButton.module.css */
+
+/* Styles de base pour le bouton */
+.ctaButton {
+  padding: 1rem 1.5rem;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--white);
+  color: var(--black)
+}
+
+/* Bouton principal (Primary) */
+.ctaButton.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.ctaButton.primary:hover {
+  background-color: var(--secondary);
+  color: var(--black);
+}
+
+/* Bouton blanc */
+.ctaButton.white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.ctaButton.white:hover {
+  background-color: var(--neutral);
+  color: var(--white);
+}
+
+/* Bouton de type danger (red) */
+.ctaButton.danger {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.ctaButton.danger:hover {
+  background-color: var(--darkRed);
+  color: var(--white);
+}
+
+/* Bouton transparent */
+.ctaButton.transparent {
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.ctaButton.transparent:hover {
+  background-color: var(--black);
+  color: var(--white);
+}

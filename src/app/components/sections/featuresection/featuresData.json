@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Explore & Enjoy",
+    "description": "Discover curated routes designed by real locals and passionate travelers. Follow step-by-step itineraries and uncover hidden gems at every turn.",
+    "image": "/rome.png",
+    "flexFlow": false
+  },
+  {
+    "id": 2,
+    "title": "Create & Share",
+    "description": "Bring your insider knowledge to life with interactive stops and vivid photos. Craft unique tours and let travelers experience the world through your eyes.",
+    "image": "/getstarted.png",
+    "flexFlow": true
+  },
+  {
+    "id": 3,
+    "title": "Earn & Connect",
+    "description": "Monetize your expertise and join a global community of explorers. Every time someone embarks on your tour, you reap the rewards.",
+    "image": "/dual.png",
+    "flexFlow": false
+  }
+]

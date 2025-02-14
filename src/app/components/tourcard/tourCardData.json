@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "image": "/tour_cards_cover/idr.jpg",
+      "title": "Balade en vélo",
+      "city": "Ile de Ré",
+      "country": "France",
+      "stops": 8,
+      "duration": 3,
+      "price": 10,
+      "rating": 4.3
+    },
+    {
+      "id": 2,
+      "image": "/tour_cards_cover/Berlin.webp",
+      "title": "Les secrets du street-art",
+      "city": "Berlin",
+      "country": "Allemagne",
+      "stops": 10,
+      "duration": 5,
+      "price": 25,
+      "rating": 4.6
+    }, 
+    {
+      "id": 3,
+      "image": "/tour_cards_cover/alfama.webp",
+      "title": "Balade dans l'Alfama",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "stops": 5,
+      "duration": 2,
+      "price": 15,
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "image": "/tour_cards_cover/barcelone.webp",
+      "title": "Découverte du barrio gothico",
+      "city": "Barcelone",
+      "country": "Spain",
+      "stops": 5,
+      "duration": 2,
+      "price": 15,
+      "rating": 4.8
+    }
+  ]
+  

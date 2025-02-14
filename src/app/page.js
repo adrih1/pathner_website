@@ -1,94 +1,50 @@
-import Image from "next/image";
+// Components
+import HeroSection from "./components/sections/herosection/herosection";
+import FeatureSection from "./components/sections/featuresection/feature";
+import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
+import FaqSection from "./components/sections/faqsection/faqsection";
+
+
+// Style
 import styles from "./page.module.css";
+import text from "./styles/text.module.css";
+import colors from "./styles/colors.module.css";
+
+// Data
+import featuresData from './components/sections/featuresection/featuresData';
 
 export default function Home() {
+
   return (
     <div className={styles.page}>
+      {/* <Navbar /> */}
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <HeroSection />
+        {featuresData.map((feature) => (
+          <FeatureSection 
+            key={feature.id} 
+            title={feature.title} 
+            description={feature.description}
+            image={feature.image}
+            flexFlow={feature.flexFlow} 
+          />
+        ))}
+        {/* <LocalExperienceSection /> */}
+        <FaqSection />
       </main>
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className={styles.subfooter}>
+          <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Get early access</h2>
+          <p className={`${text.text} ${colors.onPrimary}`}>Enter your email below and you’ll be the first to know when nexplor launches.</p>
+        </div>
+        <div className={styles.footer_links}>
+          <p>© 2025 nexplor</p>
+          <div className={styles.footer_links_right}>
+            <p style={{marginRight: "10px"}}>Terms of Service</p>
+            <p>Privacy policy</p>
+
+          </div>
+        </div>
       </footer>
     </div>
   );
