@@ -20,10 +20,9 @@
     border: 0px solid transparent; 
 }
 
-
 .text
 {
-    font-family: 'Montserrat-Medium', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     margin-top: 20px;
 }

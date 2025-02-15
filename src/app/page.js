@@ -19,7 +19,7 @@ export default function Home() {
     <div className={styles.page}>
       {/* <Navbar /> */}
       <main className={styles.main}>
-        <HeroSection />
+        {/* <HeroSection /> */}
         {featuresData.map((feature) => (
           <FeatureSection 
             key={feature.id} 
@@ -29,7 +29,7 @@ export default function Home() {
             flexFlow={feature.flexFlow} 
           />
         ))}
-        {/* <LocalExperienceSection /> */}
+        <LocalExperienceSection />
         <FaqSection />
       </main>
       <footer className={styles.footer}>

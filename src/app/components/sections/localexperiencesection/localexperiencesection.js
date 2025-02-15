@@ -31,7 +31,7 @@ const LocalExperienceSection = () => {
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: 30, // Durée d'une boucle
+            duration: 35, // Durée d'une boucle
             ease: "linear", // Défilement fluide
           }}
         >

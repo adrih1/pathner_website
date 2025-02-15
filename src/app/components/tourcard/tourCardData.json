@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "/tour_cards_cover/idr.jpg",
+      "image": "/tour_cards_cover/velo.webp",
       "title": "Balade en vélo",
       "city": "Ile de Ré",
       "country": "France",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "image": "/tour_cards_cover/Berlin.webp",
+      "image": "/tour_cards_cover/street-art.webp",
       "title": "Les secrets du street-art",
       "city": "Berlin",
       "country": "Allemagne",
@@ -34,7 +34,7 @@
     },
     {
       "id": 4,
-      "image": "/tour_cards_cover/barcelone.webp",
+      "image": "/tour_cards_cover/barrio-gothico.webp",
       "title": "Découverte du barrio gothico",
       "city": "Barcelone",
       "country": "Spain",
