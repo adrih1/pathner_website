@@ -1,4 +1,5 @@
 .local_experience {
+    width: 100%;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -6,7 +7,7 @@
     align-items: flex-start;
     padding: 5%;
     background-color: var(--primary);
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 
