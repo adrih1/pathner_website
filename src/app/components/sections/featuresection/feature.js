@@ -15,9 +15,9 @@ const FeatureSection = ({ title, description, image, flexFlow }) => {
     <motion.section
       ref={ref}
       className={`${styles.feature_container} ${flexFlow ? styles.flex_left : styles.flex_right}`}
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 80 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: 0.3 }}
+      transition={{ duration: 0.7, delay: 0.4 }}
     >
       <div className={styles.feature_text_container}>
         <h2 className={text.secondary_title}>{title}</h2>

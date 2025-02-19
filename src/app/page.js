@@ -50,8 +50,8 @@ export default function Home() {
         <div className={styles.footer_links}>
           <p>© 2025 nexplor</p>
           <div className={styles.footer_links_right}>
-            <p style={{marginRight: "10px"}}>Terms of Service</p>
-            <p>Privacy policy</p>
+            <p className={styles.link_text}>Terms of Service</p>
+            <p className={styles.link_text}>Privacy policy</p>
           </div>
         </div>
       </footer>
