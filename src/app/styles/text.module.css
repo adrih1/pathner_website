@@ -4,7 +4,7 @@
     color: var(--black);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 55px;
 }
 
 
@@ -12,11 +12,20 @@
     color: var(--black);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 48px;
     margin-bottom: 1.5rem;
 }
 
 .third_title
+{
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.fourth_title
 {
     color: var(--black);
     font-family: 'Montserrat', sans-serif;
@@ -28,7 +37,7 @@
 .text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 18px;
     color: var(--secondary); 
 }
 
@@ -48,19 +57,24 @@
 /* RESPONSIVE */
 @media (max-width: 600px) {
     .title {
-        font-size: 2rem;
+        font-size: 40px;
     }
     
     .secondary_title {
-        font-size: 2rem;
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+    
+    .third_title {
+        font-size: 20px;
         margin-bottom: 1rem;
     }
 
-    .third_title {
+    .fourth_title {
         font-size: 1rem;
     }
 
     .text {
-        font-size: 0.75rem;
+        font-size: 16px;
     }
 }

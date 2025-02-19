@@ -46,7 +46,7 @@ const FaqItem = ({ item, index }) => {
         value={item.value}
         className={styles.accordion_item}
       >
-        <AccordionItemTrigger className={text.third_title}>
+        <AccordionItemTrigger className={text.fourth_title}>
           {item.title}
         </AccordionItemTrigger>
         <AccordionItemContent className={styles.text}>
