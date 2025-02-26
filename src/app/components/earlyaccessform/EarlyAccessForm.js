@@ -5,7 +5,6 @@ import { toast } from "react-hot-toast";
 
 const EarlyAccessForm = () => {
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false); // Indicateur de chargement
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,10 +13,12 @@ const EarlyAccessForm = () => {
       return;
     }
 
-    // Vide le champ immédiatement
+    // Vide l'input immédiatement
     const currentEmail = email;
     setEmail("");
-    setLoading(true);
+
+    // Création d'un toast d'attente
+    const toastId = toast.loading("Sending your request...");
 
     try {
       const res = await fetch("/api/sendEmail", {
@@ -29,18 +30,13 @@ const EarlyAccessForm = () => {
       });
 
       if (res.ok) {
-        // Utilisation du toast.success avec une durée de 4 secondes
-        toast.success("Thank you for signing up!", {
-          duration: 3000, // Durée en millisecondes (4 secondes)
-        });
+        toast.success("Thank you for signing up!", { id: toastId }); // Mise à jour du toast d'attente en succès
       } else {
-        toast.error("Failed to send email. Please try again later."); // Notification d'erreur
+        toast.error("Failed to send email. Please try again later.", { id: toastId }); // Mise à jour du toast en erreur
       }
     } catch (error) {
       console.error(error);
-      toast.error("An error occurred. Please try again."); // Notification d'erreur
-    } finally {
-      setLoading(false);
+      toast.error("An error occurred. Please try again.", { id: toastId }); // Mise à jour du toast en erreur
     }
   };
 
@@ -55,7 +51,7 @@ const EarlyAccessForm = () => {
           className={styles.hero_input}
           required
         />
-        <CTAButton label={loading ? "Loading ..." : "Get Early Access"} type="submit" />
+        <CTAButton label="Get Early Access" type="submit" />
       </form>
     </div>
   );
