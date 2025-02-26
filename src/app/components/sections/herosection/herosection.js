@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 // Components
 import CTAButton from "../../cta/cta";
+import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
 
 // Styles
 import colors from "../../../styles/colors.module.css";
@@ -46,12 +47,13 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.2 }}
         >
-          <input
+          <EarlyAccessForm />
+          {/* <input
             type="email"
             placeholder="Your email"
             className={styles.hero_input}
           />
-          <CTAButton label="Request Early Access" />
+          <CTAButton label="Request Early Access" /> */}
         </motion.div>
       </div>
 
