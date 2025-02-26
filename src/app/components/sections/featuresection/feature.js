@@ -9,7 +9,7 @@ import styles from "./featuresection.module.css";
 
 const FeatureSection = ({ title, description, image, flexFlow }) => {
   const ref = useRef(null); // Référence à la section
-  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <motion.section

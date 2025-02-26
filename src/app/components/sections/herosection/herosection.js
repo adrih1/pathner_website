@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 // Components
-import CTAButton from "../../cta/cta";
 import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
 
 // Styles

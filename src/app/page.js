@@ -6,6 +6,7 @@ import FeatureSection from "./components/sections/featuresection/feature";
 import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
 import FaqSection from "./components/sections/faqsection/faqsection";
 import PhoneSection from "./components/sections/phonesection/phonesection";
+import FooterSection from "./components/sections/footersection/footersection";
 
 // Components
 import CTAButton from "./components/cta/cta";
@@ -38,25 +39,10 @@ export default function Home() {
         ))}
         <LocalExperienceSection />
         <HowItWorksSection />
-        <FaqSection />
         <PhoneSection />
+        <FaqSection />
       </main>
-      <footer className={styles.footer}>
-        <div className={styles.subfooter}>
-          <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Get early access</h2>
-          <p className={`${text.text} ${colors.onPrimary}`}>Enter your email below and you’ll be the first to know when nexplor launches.</p>
-          <div className={styles.ctas_container}>
-            <EarlyAccessForm />
-          </div>
-        </div>
-        <div className={styles.footer_links}>
-          <p>© 2025 nexplor</p>
-          <div className={styles.footer_links_right}>
-            <p className={styles.link_text}>Terms of Service</p>
-            <p className={styles.link_text}>Privacy policy</p>
-          </div>
-        </div>
-      </footer>
+      <FooterSection />
     </div>
   );
 }
