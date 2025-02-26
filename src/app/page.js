@@ -1,3 +1,5 @@
+"use client";
+
 // Components
 import HeroSection from "./components/sections/herosection/herosection";
 import FeatureSection from "./components/sections/featuresection/feature";
