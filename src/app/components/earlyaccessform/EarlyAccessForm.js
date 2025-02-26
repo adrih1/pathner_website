@@ -1,52 +1,64 @@
-import { useState } from 'react';
+import React, { useState } from "react";
+import CTAButton from "../cta/cta";
+import styles from "./EarlyAccess.module.css";
+import { toast } from "react-hot-toast";
 
-export default function EarlyAccessForm() {
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+const EarlyAccessForm = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false); // Indicateur de chargement
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error("Please enter an email!"); // Notification d'erreur
+      return;
+    }
 
-        try {
-            const res = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
+    // Vide le champ immédiatement
+    const currentEmail = email;
+    setEmail("");
+    setLoading(true);
 
-            const data = await res.json();
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: currentEmail }),
+      });
 
-            if (res.ok) {
-                setMessage('Merci ! Vous avez été ajouté à la liste d\'attente.');
-                setEmail('');
-            } else {
-                setMessage(data.error || 'Une erreur est survenue.');
-            }
-        } catch (error) {
-            setMessage('Une erreur est survenue.');
-        }
-    };
+      if (res.ok) {
+        // Utilisation du toast.success avec une durée de 4 secondes
+        toast.success("Thank you for signing up!", {
+          duration: 3000, // Durée en millisecondes (4 secondes)
+        });
+      } else {
+        toast.error("Failed to send email. Please try again later."); // Notification d'erreur
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("An error occurred. Please try again."); // Notification d'erreur
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    return (
-        <div className="p-4">
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
-                <label htmlFor="email">Rejoignez la liste d'attente :</label>
-                <input
-                    style={{ backgroundColor: 'var(--neutral)' }}
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    placeholder="Votre email"
-                />
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-                    Envoyer
-                </button>
-                {message && <p className="mt-2 text-sm">{message}</p>}
-            </form>
-        </div>
-    );
-}
+  return (
+    <div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          className={styles.hero_input}
+          required
+        />
+        <CTAButton label={loading ? "Loading ..." : "Get Early Access"} type="submit" />
+      </form>
+    </div>
+  );
+};
+
+export default EarlyAccessForm;

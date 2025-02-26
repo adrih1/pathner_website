@@ -1,0 +1,29 @@
+.hero_buttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.hero_input
+{
+    padding: 1rem  1.5rem;
+    background-color: var(--neutral);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.hero_button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--background);
+    background-color: var(--foreground);
+    border-radius: 10px;
+}

@@ -48,12 +48,6 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 1.2 }}
         >
           <EarlyAccessForm />
-          {/* <input
-            type="email"
-            placeholder="Your email"
-            className={styles.hero_input}
-          />
-          <CTAButton label="Request Early Access" /> */}
         </motion.div>
       </div>
 
