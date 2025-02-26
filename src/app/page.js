@@ -1,11 +1,15 @@
 "use client";
 
-// Components
+// Sections
 import HeroSection from "./components/sections/herosection/herosection";
 import FeatureSection from "./components/sections/featuresection/feature";
 import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
 import FaqSection from "./components/sections/faqsection/faqsection";
+import PhoneSection from "./components/sections/phonesection/phonesection";
+
+// Components
 import CTAButton from "./components/cta/cta";
+import EarlyAccessForm from "./components/earlyaccessform/EarlyAccessForm";
 
 // Style
 import styles from "./page.module.css";
@@ -35,18 +39,14 @@ export default function Home() {
         <LocalExperienceSection />
         <HowItWorksSection />
         <FaqSection />
+        <PhoneSection />
       </main>
       <footer className={styles.footer}>
         <div className={styles.subfooter}>
           <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Get early access</h2>
           <p className={`${text.text} ${colors.onPrimary}`}>Enter your email below and you’ll be the first to know when nexplor launches.</p>
           <div className={styles.ctas_container}>
-            <input
-              type="email"
-              placeholder="Your email"
-              className={styles.hero_input}
-            />
-            <CTAButton label="Get Early Access" />
+            <EarlyAccessForm />
           </div>
         </div>
         <div className={styles.footer_links}>

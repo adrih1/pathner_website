@@ -3,13 +3,10 @@
 // Packages
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { CiUser } from "react-icons/ci";
-import { PiPaintBrush, PiRecycleThin } from "react-icons/pi";
 
 // Icons
-// import UserIcon from "@/assets/UserIcon/UserIcon";
-// import TourIcon from "@/assets/TourIcon/TourIcon";
-// import InfinityIcon from "@/assets/InfinityIcon/InfinityIcon";
+import { CiUser } from "react-icons/ci";
+import { PiPaintBrush, PiRecycleThin } from "react-icons/pi";
 
 // Styles
 import text from "../../../styles/text.module.css";
@@ -17,7 +14,7 @@ import styles from "./howitworkssection.module.css";
 
 const HowItWorksSection = ({ title, description, image, flexFlow }) => {
   const ref = useRef(null); // Référence à la section
-  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <section className={styles.how_it_works_container}>
