@@ -44,7 +44,7 @@ export default function Home() {
               placeholder="Your email"
               className={styles.hero_input}
             />
-            <CTAButton label="Request Early Access" />
+            <CTAButton label="Get Early Access" />
           </div>
         </div>
         <div className={styles.footer_links}>
