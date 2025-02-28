@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 // Components
 import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
+import HeroCard from "../../heroelements/herocard/herocard";
+import HeroImage from "../../heroelements/heroimage/heroimage";
 
 // Styles
 import colors from "../../../styles/colors.module.css";
@@ -18,18 +20,52 @@ const HeroSectionBis = () => {
 
   return (
     <section className={styles.hero}>
-      {/* Afficher la colonne gauche seulement si l'image est chargée */}
+      {/* Elements to be placed via calculation */}
+      <HeroCard 
+        title="Les Secrets du Street Art" 
+        city = "Berlin"
+        image="/tour_cards_cover/street-art.webp"
+        rating="4.3"
+        top="5%"
+        left="40px"
+        rotate="-5deg"
+      />
+      <HeroCard 
+        title="Journée dans les Pouilles" 
+        city = "Bari"
+        image="/tour_cards_cover/pouilles.jpg"
+        rating="4.8"
+        top="8%"
+        right="40px"
+        rotate="2deg"
+      />
+      <HeroCard 
+        title="Nimes et son histoire" 
+        city = "Nîmes"
+        image="/tour_cards_cover/nimes.jpg"
+        rating="4.8"
+        top="30%"
+        right="15%"
+        rotate="0deg"
+      />
+      <HeroImage 
+        image="/tourism.png"
+        top="30%"
+        left="15%"
+        rotate="-2deg"
+      />
+
       {isImageLoaded && (
-        <div className={styles.hero_left_column}>
+        <div className={styles.hero_left_column}>        
           <div className={styles.hero_left_column_text}>
             {/* Animation du titre */}
             <motion.h1
-              className={`${styles.title} ${colors.onPrimary}`}
+              className={`${styles.title}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              Reinvent the way you explore
+              <span style={{color: 'var(--primary)'}}>Reinvent</span> the way you  <span style={{color: 'var(--primary)'}}>explore</span>
             </motion.h1>
 
             {/* Animation de la description avec un léger délai */}
@@ -63,16 +99,21 @@ const HeroSectionBis = () => {
           </div>
         )}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7}}
-          style={{ position: "relative" }}
+          style={{paddingTop: "10px"}}
+          initial={{ y: 0 }}
+          animate={{ y: [-10, 10, -10] }} // Déplacement en boucle de -10px à 10px
+          transition={{
+            duration: 2, // Durée d'une boucle complète
+            repeat: Infinity, // Répéter à l'infini
+            repeatType: "loop", // Type de répétition : "loop", "reverse", ou "mirror"
+            ease: "easeInOut", // Courbe d'accélération
+          }}
         >
           <Image
             src="/herobis.png"
             alt="App's homepage"
             layout="responsive"
-            width={500}
+            width={400}
             height={700}
             className={styles.hero_image}
             onLoad={() => setIsImageLoaded(true)} // Définir l'état de chargement à "true" une fois l'image chargée
