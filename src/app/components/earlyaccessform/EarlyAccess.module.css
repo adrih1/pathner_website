@@ -2,7 +2,6 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 20px;
     width: 100%;
 }
@@ -11,7 +10,8 @@
 .hero_input
 {
     padding: 1rem  1.5rem;
-    background-color: var(--neutral);
+    background-color: white;
+    border: 1px solid var(--neutral);
     border-radius: 10px;
     margin-right: 10px;
 }

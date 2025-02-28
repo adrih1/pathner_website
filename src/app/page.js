@@ -40,8 +40,8 @@ export default function Home() {
           />
         ))}
         <LocalExperienceSection />
-        <FaqSection />
         <HowItWorksSection />
+        <FaqSection />
         {/* <PhoneSection /> */}
       </main>
       <FooterSection />

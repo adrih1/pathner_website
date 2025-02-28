@@ -33,7 +33,6 @@
 .title
 {
     font-size: 90px; 
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -42,7 +41,6 @@
 {
     margin: 0 auto;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: var(--background);
     max-width: 800px;

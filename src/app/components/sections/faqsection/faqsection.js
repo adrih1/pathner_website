@@ -17,7 +17,7 @@ import text from "../../../styles/text.module.css";
 const FaqSection = () => {
   return (
     <div className={styles.faq_container}>
-      <h2 className={text.secondary_title} style={{ color: "var(--white)" }}>
+      <h2 className={text.secondary_title}>
         Frequently Asked Questions 🤔
       </h2>
       <AccordionRoot collapsible>

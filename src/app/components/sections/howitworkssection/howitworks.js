@@ -25,7 +25,7 @@ const HowItWorksSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
         >
-            Few easy steps and you're good to{" "}
+            Few easy steps and you're good to<br></br>{" "}
 
             <motion.span
                 style={{ color: "var(--primary)", display: "inline-block" }}

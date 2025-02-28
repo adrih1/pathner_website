@@ -2,7 +2,6 @@
 
 .title {
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 55px;
 }
@@ -10,15 +9,13 @@
 
 .secondary_title {
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 30px;
 }
 
 .third_title
 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 35px;
     margin-bottom: 15px;
@@ -28,14 +25,12 @@
 .fourth_title
 {
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 20px;
 }
 
 
 .text {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: var(--secondary); 

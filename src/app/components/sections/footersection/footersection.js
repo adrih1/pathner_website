@@ -18,7 +18,9 @@ const FooterSection = () => {
     <footer className={styles.footer}>
       <div className={styles.footer_cta_container}>
         <h2 className={styles.footer_title}>Ready to change the<br></br><span style={{color: 'var(--primary)'}}>Way You Explore ? 🌍</span></h2>
-        <EarlyAccessForm />
+        <div className={styles.cta_container}>
+          <EarlyAccessForm />
+        </div>
       </div>
       <div className={styles.footer_links_container}>
         <div className={styles.footer_links_left}>
