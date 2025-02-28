@@ -99,7 +99,7 @@ const HeroSectionBis = () => {
           </div>
         )}
         <motion.div
-          style={{paddingTop: "10px"}}
+          style={{paddingTop: "10px", paddingBottom: "10px"}}
           initial={{ y: 0 }}
           animate={{ y: [-10, 10, -10] }} // Déplacement en boucle de -10px à 10px
           transition={{

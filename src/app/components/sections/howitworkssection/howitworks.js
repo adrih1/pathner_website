@@ -4,10 +4,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-// Icons
-import { CiUser } from "react-icons/ci";
-import { PiPaintBrush, PiRecycleThin } from "react-icons/pi";
-
 // Styles
 import text from "../../../styles/text.module.css";
 import styles from "./howitworkssection.module.css";
