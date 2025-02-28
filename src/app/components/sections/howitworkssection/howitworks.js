@@ -13,7 +13,7 @@ import text from "../../../styles/text.module.css";
 import styles from "./howitworkssection.module.css";
 
 const HowItWorksSection = () => {
-  const ref = useRef(null); // Référence à la section
+  const ref = useRef(null); 
   const isInView = useInView(ref, { once: true });
 
   return (

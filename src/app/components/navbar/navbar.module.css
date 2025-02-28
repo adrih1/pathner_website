@@ -40,3 +40,23 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    
+  
+
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .nav_links {
+        display: none;
+    }
+}
+

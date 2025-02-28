@@ -74,3 +74,23 @@
     z-index: 1; /* Placez le dégradé entre l'image et le texte */
     pointer-events: none; /* Assurez-vous que le dégradé n'interfère pas avec les interactions */
 }
+
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    
+  
+
+}
+
+@media (max-width: 600px) {
+    .tour_card {
+        height: 115px;
+        width: 85px;
+    }
+
+    .nav_links {
+        display: none;
+    }
+}
+

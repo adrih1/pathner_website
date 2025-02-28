@@ -60,7 +60,7 @@ const HeroSectionBis = () => {
           <div className={styles.hero_left_column_text}>
             {/* Animation du titre */}
             <motion.h1
-              className={`${styles.title}`}
+              className={`${text.title}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}

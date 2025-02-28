@@ -36,7 +36,6 @@ const Navbar = () => {
         <a href="#experiences" className={styles.nav_link}>Tours</a>
         <a href="#faq" className={styles.nav_link}>FAQ</a>
       </div>
-
       <CTAButton label="Get Early Access" />
     </nav>
   );

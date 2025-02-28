@@ -30,13 +30,6 @@
     margin-bottom: 20px;
 }
 
-.title
-{
-    font-size: 90px; 
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
 .text
 {
     margin: 0 auto;
@@ -147,3 +140,5 @@
         margin-bottom: 1rem;
     }
 }
+
+

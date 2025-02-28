@@ -42,6 +42,7 @@
   max-width: 1000px;
   display: flex; 
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   border-top: 1px solid lightgrey;
   padding: 20px 0px;
@@ -50,6 +51,7 @@
 .footer_links_left
 {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -58,4 +60,28 @@
 {
   font-size: 14px;
   margin-right: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+
+  .footer_links_container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px; 
+    margin-top: 10px;
+  }
+
+  .footer_links_left
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer_link {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+ 
 }
