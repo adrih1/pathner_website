@@ -1,7 +1,7 @@
-.hero_buttons
+.cta_container
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
     width: 100%;

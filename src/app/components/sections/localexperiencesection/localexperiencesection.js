@@ -21,7 +21,7 @@ const LocalExperienceSection = () => {
     <section className={styles.local_experience}>
       <div className={styles.left_column}>
         <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Dive into our local experiences</h2>
-        <p className={`${text.text} ${colors.onPrimary}`}>Every itinerary is crafted by locals who know their city best. Find hidden gems, unique spots, and unforgettable adventures.</p>
+        <p className={`${text.text} ${colors.onPrimary} ${text.max_width_700}`}>Every itinerary is crafted by locals who know their city best. Find hidden gems, unique spots, and unforgettable adventures.</p>
       </div>
       <div className={styles.right_column}>
         <motion.div

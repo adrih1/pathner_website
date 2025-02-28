@@ -41,19 +41,17 @@ const EarlyAccessForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          className={styles.hero_input}
-          required
-        />
-        <CTAButton label="Get Early Access" type="submit" />
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className={styles.cta_container}>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+        className={styles.hero_input}
+        required
+      />
+      <CTAButton label="Get Early Access" type="submit" />
+    </form>
   );
 };
 

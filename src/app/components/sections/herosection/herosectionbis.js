@@ -10,10 +10,10 @@ import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
 
 // Styles
 import colors from "../../../styles/colors.module.css";
-import styles from "./herosection.module.css";
+import styles from "./herosectionbis.module.css";
 import text from "../../../styles/text.module.css";
 
-const HeroSection = () => {
+const HeroSectionBis = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Suivi de l'état de chargement
 
   return (
@@ -24,7 +24,7 @@ const HeroSection = () => {
           <div className={styles.hero_left_column_text}>
             {/* Animation du titre */}
             <motion.h1
-              className={`${text.title} ${colors.onPrimary}`}
+              className={`${styles.title} ${colors.onPrimary}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -33,24 +33,24 @@ const HeroSection = () => {
             </motion.h1>
 
             {/* Animation de la description avec un léger délai */}
-            <motion.p
-              className={`${text.text} ${colors.onPrimary}`}
+            {/* <motion.p
+              className={`${styles.text} ${colors.onPrimary}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
               Turn your knowledge into guided experiences. Join a thriving community of Tour creators and explorers.
-            </motion.p>
-          </div>
+            </motion.p> */}
 
-          <motion.div
-            className={styles.hero_buttons}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 1.2 }}
-          >
-            <EarlyAccessForm />
-          </motion.div>
+            <motion.div
+              className={styles.hero_buttons}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+            >
+              <EarlyAccessForm />
+            </motion.div>
+          </div>
         </div>
       )}
 
@@ -69,7 +69,7 @@ const HeroSection = () => {
           style={{ position: "relative" }}
         >
           <Image
-            src="/hero_image.png"
+            src="/herobis.png"
             alt="App's homepage"
             layout="responsive"
             width={500}
@@ -83,4 +83,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSectionBis ;

@@ -18,7 +18,7 @@ const FaqSection = () => {
   return (
     <div className={styles.faq_container}>
       <h2 className={text.secondary_title} style={{ color: "var(--white)" }}>
-        FAQ
+        Frequently Asked Questions 🤔
       </h2>
       <AccordionRoot collapsible>
         {items.map((item, index) => (

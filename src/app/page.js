@@ -2,6 +2,7 @@
 
 // Sections
 import HeroSection from "./components/sections/herosection/herosection";
+import HeroSectionBis from "./components/sections/herosection/herosectionbis";
 import FeatureSection from "./components/sections/featuresection/feature";
 import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
 import FaqSection from "./components/sections/faqsection/faqsection";
@@ -27,7 +28,7 @@ export default function Home() {
     <div className={styles.page}>
       {/* <Navbar /> */}
       <main className={styles.main}>
-        <HeroSection />
+        <HeroSectionBis />
         {featuresData.map((feature) => (
           <FeatureSection 
             key={feature.id} 
@@ -39,7 +40,7 @@ export default function Home() {
         ))}
         <LocalExperienceSection />
         <HowItWorksSection />
-        <PhoneSection />
+        {/* <PhoneSection /> */}
         <FaqSection />
       </main>
       <FooterSection />
