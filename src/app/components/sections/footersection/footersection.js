@@ -16,18 +16,18 @@ import text from "../../../styles/text.module.css";
 const FooterSection = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.subfooter}>
-        <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Get early access</h2>
-        <p className={`${text.text} ${colors.onPrimary}`}>Enter your email below and you’ll be the first to know when nexplor launches.</p>
-        <div className={styles.ctas_container}>
-          <EarlyAccessForm />
-        </div>
+      <div className={styles.footer_cta_container}>
+        <h2 className={styles.footer_title}>Ready to change the<br></br><span style={{color: 'var(--primary)'}}>Way You Explore ? 🌍</span></h2>
+        <EarlyAccessForm />
       </div>
-      <div className={styles.footer_links}>
-        <p>© 2025 nexplor</p>
+      <div className={styles.footer_links_container}>
+        <div className={styles.footer_links_left}>
+          <p className={styles.footer_link}>Terms and Conditions</p>
+          <p className={styles.footer_link}>Privacy Policy</p>
+          <p className={styles.footer_link}>Help & Support</p>
+        </div>
         <div className={styles.footer_links_right}>
-          <p className={styles.link_text}>Terms of Service</p>
-          <p className={styles.link_text}>Privacy policy</p>
+          <p className={styles.footer_link}>All rights reserved, © nexplor</p>
         </div>
       </div>
     </footer>

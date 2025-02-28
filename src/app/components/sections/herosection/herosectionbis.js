@@ -46,7 +46,7 @@ const HeroSectionBis = () => {
         rating="4.8"
         top="30%"
         right="15%"
-        rotate="0deg"
+        rotate="-1deg"
       />
       <HeroImage 
         image="/tourism.png"

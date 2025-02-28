@@ -40,9 +40,9 @@ export default function Home() {
           />
         ))}
         <LocalExperienceSection />
+        <FaqSection />
         <HowItWorksSection />
         {/* <PhoneSection /> */}
-        <FaqSection />
       </main>
       <FooterSection />
     </div>
