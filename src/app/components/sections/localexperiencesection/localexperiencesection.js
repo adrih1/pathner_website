@@ -18,7 +18,7 @@ import text from "../../../styles/text.module.css";
 
 const LocalExperienceSection = () => {
   return (
-    <section className={styles.local_experience}>
+    <section id="#local-experiences" className={styles.local_experience}>
       <div className={styles.left_column}>
         <h2 className={`${text.secondary_title} ${colors.onPrimary}`}>Dive into our local experiences</h2>
         <p className={`${text.text} ${colors.onPrimary} ${text.max_width_700}`}>Every itinerary is crafted by locals who know their city best. Find hidden gems, unique spots, and unforgettable adventures.</p>

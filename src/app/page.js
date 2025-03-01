@@ -1,14 +1,18 @@
 "use client";
 
 // Sections
-import HeroSection from "./components/sections/herosection/herosection";
 import Navbar from "./components/navbar/navbar";
 import HeroSectionBis from "./components/sections/herosection/herosectionbis";
+import AboutUs from "./components/sections/aboutus/aboutussection";
 import FeatureSection from "./components/sections/featuresection/feature";
 import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
+import HowItWorksSection from "./components/sections/howitworkssection/howitworks";
 import FaqSection from "./components/sections/faqsection/faqsection";
-import PhoneSection from "./components/sections/phonesection/phonesection";
 import FooterSection from "./components/sections/footersection/footersection";
+
+import HeroSection from "./components/sections/herosection/herosection";
+import PhoneSection from "./components/sections/phonesection/phonesection";
+
 
 // Components
 import CTAButton from "./components/cta/cta";
@@ -21,7 +25,6 @@ import colors from "./styles/colors.module.css";
 
 // Data
 import featuresData from './components/sections/featuresection/featuresData';
-import HowItWorksSection from "./components/sections/howitworkssection/howitworks";
 
 export default function Home() {
 
@@ -30,6 +33,7 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <HeroSectionBis />
+        <AboutUs />
         {featuresData.map((feature) => (
           <FeatureSection 
             key={feature.id} 
