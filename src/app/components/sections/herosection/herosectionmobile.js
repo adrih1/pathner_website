@@ -67,16 +67,6 @@ const HeroSectionMobile = () => {
               <span style={{color: 'var(--primary)'}}>Reinvent</span> the way you  <span style={{color: 'var(--primary)'}}>explore</span>
             </motion.h1>
 
-            {/* Animation de la description avec un léger délai */}
-            {/* <motion.p
-              className={`${styles.text} ${colors.onPrimary}`}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.7 }}
-            >
-              Turn your knowledge into guided experiences. Join a thriving community of Tour creators and explorers.
-            </motion.p> */}
-
             <motion.div
               className={styles.hero_buttons}
               initial={{ opacity: 0 }}

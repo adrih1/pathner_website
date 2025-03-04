@@ -23,7 +23,7 @@ const AboutUs = () => {
           <h2 className={styles.title}>
             Nexplor is a dynamic platform designed for curious travelers and passionate locals to connect through authentic, themed city tours. As a local creator, you’ll have the tools and support needed to share your favorite spots and hidden gems with a global audience, earning while inspiring others.
             <br></br><br></br>
-            We create seamless bridge between discovery and connection, making every journey unforgettable.
+            Turn your knowledge into guided experiences. Join a thriving community of Tour creators and explorers.
           </h2>
         </motion.div>
     </section>
