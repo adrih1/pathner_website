@@ -93,30 +93,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-  }
+}
   
   /* Spinner Animation */
-  .spinner {
+.spinner {
     width: 50px;
     height: 50px;
     border: 5px solid rgba(0, 0, 0, 0.1);
     border-top: 5px solid #000; /* Couleur principale */
     border-radius: 50%;
     animation: spin 1s linear infinite;
-  }
+}
   
   /* Animation pour la rotation */
-  @keyframes spin {
+@keyframes spin {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
     }
-  }
+}
   
 
 /* RESPONSIVE */
+@media (min-width: 901px) {
+    .hero {
+        display: none;
+    }
+}
+
+
 @media (max-width: 1000px) {
     .hero {
        padding-left: 5%;

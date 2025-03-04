@@ -2,7 +2,8 @@
 
 // Sections
 import Navbar from "./components/navbar/navbar";
-import HeroSectionBis from "./components/sections/herosection/herosectionbis";
+import HeroSectionDesktop from "./components/sections/herosection/herosection";
+import HeroSectionMobile from "./components/sections/herosection/herosectionmobile";
 import AboutUs from "./components/sections/aboutus/aboutussection";
 import FeatureSection from "./components/sections/featuresection/feature";
 import LocalExperienceSection from "./components/sections/localexperiencesection/localexperiencesection";
@@ -32,7 +33,8 @@ export default function Home() {
     <div className={styles.page}>
       <Navbar />
       <main className={styles.main}>
-        <HeroSectionBis />
+        <HeroSectionMobile />
+        <HeroSection />
         <AboutUs />
         {featuresData.map((feature) => (
           <FeatureSection 

@@ -23,3 +23,23 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .aboutus_section
+    {
+        padding: 20px;
+        padding-bottom: 30px;
+    }
+
+    .aboutus_container
+    {
+        text-align: left;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    
+}

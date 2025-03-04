@@ -15,7 +15,7 @@
     background-color: var(--neutral);
     border-radius: 20px;
     padding: 30px 20px; 
-    border: 0px solid transparent; 
+    border: 0px solid transparent !important; 
     max-width: 700px;
     margin: 0 auto;
     margin-bottom: 20px;

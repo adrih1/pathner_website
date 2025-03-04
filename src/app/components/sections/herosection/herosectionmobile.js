@@ -11,11 +11,10 @@ import HeroCard from "../../heroelements/herocard/herocard";
 import HeroImage from "../../heroelements/heroimage/heroimage";
 
 // Styles
-import colors from "../../../styles/colors.module.css";
-import styles from "./herosectionbis.module.css";
+import styles from "./herosectionmobile.module.css";
 import text from "../../../styles/text.module.css";
 
-const HeroSectionBis = () => {
+const HeroSectionMobile = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Suivi de l'état de chargement
 
   return (
@@ -44,14 +43,14 @@ const HeroSectionBis = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.8"
-        top="30%"
+        top="70%"
         right="15%"
-        rotate="-1deg"
+        rotate="2deg"
       />
       <HeroImage 
         image="/tourism.png"
-        top="30%"
-        left="15%"
+        top="60%"
+        left="5%"
         rotate="-2deg"
       />
 
@@ -124,4 +123,4 @@ const HeroSectionBis = () => {
   );
 };
 
-export default HeroSectionBis ;
+export default HeroSectionMobile ;
