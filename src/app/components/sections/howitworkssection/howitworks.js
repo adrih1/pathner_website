@@ -24,7 +24,7 @@ const HowItWorksSection = () => {
             Few easy steps and you're good to<br></br>{" "}
 
             <motion.span
-                style={{ color: "var(--primary)", display: "inline-block" }}
+                style={{ color: "#48704F", display: "inline-block" }}
                 animate={{
                     rotate: [10, -10, 10, 0, 0, 0], // Tremble (rotate) puis s'arrête
                 }}
@@ -50,7 +50,7 @@ const HowItWorksSection = () => {
                 transition={{ duration: 0.7, delay: 0.2 }}
             >
                 <div className={styles.step_number_container}>
-                    <p className={styles.step_number} style={{color: 'var(--primary)'}}>1</p>
+                    <p className={styles.step_number} style={{color: '#48704F'}}>1</p>
                 </div>
                 <h3 className={text.third_title}>Sign Up & Browse</h3>
                 <p className={text.body}>Create your profile and explore a <strong>wide selection</strong> of tours designed by <strong>fellow travelers</strong>. Filter by destination, theme, or interest to find your perfect match.</p>
@@ -59,7 +59,7 @@ const HowItWorksSection = () => {
             <motion.div
                 ref={ref}
                 className={styles.step}
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ backgroundColor: '#48704F' }}
                 initial={{ opacity: 0, y: 80 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.4 }}

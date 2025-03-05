@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--primary);
+  background-color: #48704F;
   height: 400px;
   min-height: 400px;
   flex-direction: column;

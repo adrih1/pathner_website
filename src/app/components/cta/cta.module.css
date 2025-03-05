@@ -3,7 +3,7 @@
 /* Styles de base pour le bouton */
 .ctaButton {
   padding: 15px; 
-  background-color: var(--black);
+  background-color: #1C1C1C;
   color: var(--white);
   border: none;
   border-radius: 10px;
@@ -15,24 +15,24 @@
 
 .ctaButton:hover {
   background-color: var(--white);
-  color: var(--black)
+  color: #1C1C1C
 }
 
 /* Bouton principal (Primary) */
 .ctaButton.primary {
-  background-color: var(--primary);
+  background-color: #48704F;
   color: var(--white);
 }
 
 .ctaButton.primary:hover {
-  background-color: var(--secondary);
-  color: var(--black);
+  background-color: #576663;
+  color: #1C1C1C;
 }
 
 /* Bouton blanc */
 .ctaButton.white {
   background-color: var(--white);
-  color: var(--black);
+  color: #1C1C1C;
 }
 
 .ctaButton.white:hover {
@@ -54,12 +54,12 @@
 /* Bouton transparent */
 .ctaButton.transparent {
   background-color: transparent;
-  color: var(--black);
-  border: 2px solid var(--black);
+  color: #1C1C1C;
+  border: 2px solid #1C1C1C;
 }
 
 .ctaButton.transparent:hover {
-  background-color: var(--black);
+  background-color: #1C1C1C;
   color: var(--white);
 }
 

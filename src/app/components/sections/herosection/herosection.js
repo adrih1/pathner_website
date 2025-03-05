@@ -64,7 +64,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <span style={{color: 'var(--primary)'}}>Reinvent</span> the way you  <span style={{color: 'var(--primary)'}}>explore</span>
+              <span style={{color: '#48704F'}}>Reinvent</span> the way you  <span style={{color: '#48704F'}}>explore</span>
             </motion.h1>
 
             {/* Animation de la description avec un léger délai */}

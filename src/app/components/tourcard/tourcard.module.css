@@ -1,5 +1,4 @@
-.tour_card
-{
+.tour_card {
     height: 340px;
     width: 370px;
     display: flex;
@@ -10,7 +9,11 @@
     overflow: hidden;
     margin-right: 20px;
     position: relative; 
+    transform: perspective(1000px); /* Nécessaire pour l'effet 3D */
+    transition: transform 0.2s ease-out; /* Transition douce pour l'effet */
+    will-change: transform; /* Optimisation pour l'animation */
 }
+
 
 .image_container
 {
@@ -95,7 +98,7 @@
     flex-grow: 1;
     justify-content: flex-start;
     align-items: flex-end;
-    color: var(--primary);
+    color: #48704F;
     font-weight: 600;
 }
 

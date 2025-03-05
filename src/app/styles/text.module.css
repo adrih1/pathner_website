@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .title {
-    color: var(--black);
+    color: #1C1C1C;
     font-weight: 700;
     font-size: 90px;
     margin-bottom: 20px;
@@ -9,7 +9,7 @@
 
 
 .secondary_title {
-    color: var(--black);
+    color: #1C1C1C;
     font-weight: 700;
     font-size: 60px;
     margin-bottom: 30px;
@@ -25,7 +25,7 @@
 
 .fourth_title
 {
-    color: var(--black);
+    color: #1C1C1C;
     font-weight: 600;
     font-size: 20px;
 }
@@ -34,7 +34,7 @@
 .text {
     font-weight: 500;
     font-size: 18px;
-    color: var(--secondary); 
+    color: #576663; 
 }
 
 

@@ -57,15 +57,9 @@ const HeroSectionMobile = () => {
       {isImageLoaded && (
         <div className={styles.hero_left_column}>        
           <div className={styles.hero_left_column_text}>
-            {/* Animation du titre */}
-            <motion.h1
-              className={`${text.title}`}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-            >
-              <span style={{color: 'var(--primary)'}}>Reinvent</span> the way you  <span style={{color: 'var(--primary)'}}>explore</span>
-            </motion.h1>
+            <h1 className={`${text.title}`}>
+              <span style={{color: '#48704F'}}>Reinvent</span> the way you  <span style={{color: '#48704F'}}>explore</span>
+            </h1>
 
             <motion.div
               className={styles.hero_buttons}

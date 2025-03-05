@@ -30,6 +30,7 @@
 
 .footer_title
 {
+  color: #1C1C1C;
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -38,6 +39,7 @@
 
 .footer_links_container
 {
+  color: #1C1C1C;
   width: 100%;
   max-width: 1000px;
   display: flex; 
@@ -62,6 +64,11 @@
   margin-right: 10px;
 }
 
+.footer_link:hover
+{
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 /* RESPONSIVE */
 @media (max-width: 700px) {
