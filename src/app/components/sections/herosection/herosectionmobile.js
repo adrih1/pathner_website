@@ -20,24 +20,27 @@ const HeroSectionMobile = () => {
   return (
     <section className={styles.hero}>
       {/* Elements to be placed via calculation */}
-      <HeroCard 
-        title="Les Secrets du Street Art" 
-        city = "Berlin"
-        image="/tour_cards_cover/street-art.webp"
-        rating="4.3"
-        top="5%"
-        left="40px"
-        rotate="-5deg"
-      />
-      <HeroCard 
-        title="Journée dans les Pouilles" 
-        city = "Bari"
-        image="/tour_cards_cover/pouilles.jpg"
-        rating="4.8"
-        top="8%"
-        right="40px"
-        rotate="2deg"
-      />
+      <div style={{position: 'relative', display: 'flex', height: '200px', width: '100%'}}>
+        <HeroCard 
+          title="Les Secrets du Street Art" 
+          city = "Berlin"
+          image="/tour_cards_cover/street-art.webp"
+          rating="4.3"
+          top="0%"
+          left="40px"
+          rotate="-5deg"
+        />
+        <HeroCard 
+          title="Journée dans les Pouilles" 
+          city = "Bari"
+          image="/tour_cards_cover/pouilles.jpg"
+          rating="4.8"
+          top="8%"
+          right="40px"
+          rotate="2deg"
+        />
+      </div>
+      
       <HeroCard 
         title="Nimes et son histoire" 
         city = "Nîmes"
@@ -47,12 +50,16 @@ const HeroSectionMobile = () => {
         right="15%"
         rotate="2deg"
       />
-      <HeroImage 
-        image="/tourism.png"
-        top="60%"
-        left="5%"
-        rotate="-2deg"
+      <HeroCard 
+        title="Nimes et son histoire" 
+        city = "Nîmes"
+        image="/tour_cards_cover/nimes.jpg"
+        rating="4.8"
+        top="70%"
+        left="15%"
+        rotate="2deg"
       />
+     
 
       {isImageLoaded && (
         <div className={styles.hero_left_column}>        

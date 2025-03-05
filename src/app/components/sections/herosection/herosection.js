@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section id="home" className={styles.hero}>
       {/* Elements to be placed via calculation */}
       <HeroCard 
-        title="Les Secrets du Street Art" 
+        title="Secrets of Street Art" 
         city = "Berlin"
         image="/tour_cards_cover/street-art.webp"
         rating="4.3"
@@ -30,28 +30,31 @@ const HeroSection = () => {
         rotate="-5deg"
       />
       <HeroCard 
-        title="Journée dans les Pouilles" 
+        title="A Day in the Pouilles" 
         city = "Bari"
         image="/tour_cards_cover/pouilles.jpg"
-        rating="4.8"
+        rating="4.5"
         top="8%"
         right="40px"
         rotate="2deg"
       />
       <HeroCard 
-        title="Nimes et son histoire" 
+        title="Nimes and its history" 
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
-        rating="4.8"
+        rating="4.9"
         top="30%"
         right="15%"
         rotate="-1deg"
       />
-      <HeroImage 
-        image="/tourism.png"
-        top="30%"
+      <HeroCard 
+        title="Biking in Île de Ré" 
+        city = "La Couarde"
+        image="/tour_cards_cover/velo.webp"
+        rating="4.1"
+        top="35%"
         left="15%"
-        rotate="-2deg"
+        rotate="-1deg"
       />
 
       {isImageLoaded && (

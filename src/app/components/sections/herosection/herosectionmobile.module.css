@@ -4,16 +4,16 @@
     position: relative; 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     padding: 10%;
     text-align: center;
+    height: auto;
     min-height: 100vh;
     overflow: hidden;
 }
   
 .hero_left_column {
-    overflow: hidden;
     max-width: 900px;
     width: 100%;
     text-align: center;
