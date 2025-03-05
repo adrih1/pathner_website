@@ -38,7 +38,9 @@ const Navbar = () => {
         <a onClick={() => scrollToSection("how-it-works")} className={styles.nav_link}>How it works</a>
         <a onClick={() => scrollToSection("faq")} className={styles.nav_link}>FAQ</a>
       </div>
-      <CTAButton label="Get Early Access" />
+      <a onClick={() => scrollToSection("footer")} className={styles.nav_link}>
+        <CTAButton label="Get Early Access" />
+      </a>
     </nav>
   );
 };

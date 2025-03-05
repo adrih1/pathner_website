@@ -15,7 +15,7 @@ import text from "../../../styles/text.module.css";
 
 const FooterSection = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={styles.footer_cta_container}>
         <h2 className={styles.footer_title}>Ready to change the<br></br><span style={{color: '#48704F'}}>Way You Explore ? 🌍</span></h2>
         <div className={styles.cta_container}>
