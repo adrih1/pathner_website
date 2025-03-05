@@ -13,7 +13,7 @@ const HowItWorksSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className={styles.how_it_works_container}>
+    <section id="how-it-works" className={styles.how_it_works_container}>
         <motion.h2 
             className={`${text.secondary_title} ${styles.how_it_works_title}`}
             ref={ref}

@@ -18,7 +18,7 @@ const HeroSection = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Suivi de l'état de chargement
 
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       {/* Elements to be placed via calculation */}
       <HeroCard 
         title="Les Secrets du Street Art" 

@@ -16,7 +16,7 @@ import text from "../../../styles/text.module.css";
 
 const FaqSection = () => {
   return (
-    <div className={styles.faq_container}>
+    <div className={styles.faq_container} id="faq">
       <h2 className={text.secondary_title}>
         Frequently Asked Questions 🤔
       </h2>

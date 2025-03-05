@@ -53,6 +53,9 @@
 
 .rating_container
 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 12px;
     z-index: 2;
     position: absolute;
@@ -61,6 +64,12 @@
     padding: 10px 20px; 
     border-radius: 50px;
     background-color: var(--white);
+    color: #1c1c1c; 
+}
+
+.rating_text
+{
+    margin-right: 5px;
 }
 
 /* Dégradé linéaire pour améliorer la lisibilité */

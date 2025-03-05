@@ -12,7 +12,7 @@ const AboutUs = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className={styles.aboutus_section}>
+    <section id="about-us" className={styles.aboutus_section}>
       <motion.div
           className={styles.aboutus_container}
           ref={ref}

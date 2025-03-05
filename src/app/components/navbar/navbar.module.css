@@ -12,6 +12,7 @@
     transition: backdrop-filter 0.3s ease; /* Transition douce pour le flou */
     backdrop-filter: none; /* Pas de flou par défaut */
     background-color: rgba(255, 255, 255, 0.5); /* Légère transparence de fond */
+    color: #1c1c1c;
 }
 
 /* Lorsque l'utilisateur défile */

@@ -128,15 +128,11 @@
     .hero {
        padding-left: 5%;
        padding-right: 5%;
-       flex-direction: column;
     }
     .hero_left_column {
        max-width: 100%;
        width: 100%;
        text-align: center;
-    }
-    .hero_right_column {
-        display: none;
     }
 
     .hero_buttons {

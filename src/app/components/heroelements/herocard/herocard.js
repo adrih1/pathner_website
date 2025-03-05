@@ -5,7 +5,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Global Style
+
+
 // Local Style
+import { FaStar } from "react-icons/fa";
 import styles from "./herocard.module.css";
 
 const HeroCard = ({ image, title, city, rating, top, left, right, rotate}) => {
@@ -25,7 +28,8 @@ const HeroCard = ({ image, title, city, rating, top, left, right, rotate}) => {
     >
       <div className={styles.card_content}>
         <div className={styles.rating_container}>
-          <p>{rating}</p>
+          <p className={styles.rating_text}>{rating}</p>
+          <FaStar />
         </div>
         <img src={image} alt="App's homepage" className={styles.image} />
         {/* Dégradé pour améliorer la lisibilité du texte */}

@@ -13,6 +13,7 @@ const FeatureSection = ({ title, description, image, flexFlow }) => {
 
   return (
     <motion.section
+      id="features"
       ref={ref}
       className={`${styles.feature_container} ${flexFlow ? styles.flex_left : styles.flex_right}`}
       initial={{ opacity: 0, y: 80 }}

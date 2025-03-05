@@ -6,6 +6,7 @@ import CTAButton from "../cta/cta";
 
 // Styles
 import styles from "./navbar.module.css";
+import { scrollToSection } from "@/app/utils/scrollToSection";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,11 +32,11 @@ const Navbar = () => {
         <a href="#home">nexplor</a>
       </div>
       <div className={styles.nav_links}>
-        <a href="#about-us" className={styles.nav_link}>About Us</a>
-        <a href="#features" className={styles.nav_link}>Features</a>
-        <a href="#tours" className={styles.nav_link}>Tours</a>
-        <a href="#how-it-works" className={styles.nav_link}>How it works</a>
-        <a href="#faq" className={styles.nav_link}>FAQ</a>
+        <a onClick={() => scrollToSection("about-us")} className={styles.nav_link}>About Us</a>
+        <a onClick={() => scrollToSection("features")} className={styles.nav_link}>Features</a>
+        <a onClick={() => scrollToSection("tours")} className={styles.nav_link}>Tours</a>
+        <a onClick={() => scrollToSection("how-it-works")} className={styles.nav_link}>How it works</a>
+        <a onClick={() => scrollToSection("faq")} className={styles.nav_link}>FAQ</a>
       </div>
       <CTAButton label="Get Early Access" />
     </nav>

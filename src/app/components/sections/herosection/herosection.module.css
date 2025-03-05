@@ -10,6 +10,7 @@
     text-align: center;
     min-height: 100vh;
     overflow: hidden;
+    scroll-margin-top: 400px; 
 }
   
 .hero_left_column {
