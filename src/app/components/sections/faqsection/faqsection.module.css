@@ -30,6 +30,7 @@
 
 .text
 {
+    color: #1c1c1c; 
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     margin-top: 20px;
