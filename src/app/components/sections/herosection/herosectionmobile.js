@@ -46,18 +46,18 @@ const HeroSectionMobile = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.8"
-        top="45%"
-        right="5%"
-        rotate="2deg"
+        top="55%"
+        right="2%"
+        rotate="3deg"
       />
       <HeroCard 
         title="Nimes et son histoire" 
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.8"
-        top="50%"
+        top="60%"
         left="5%"
-        rotate="2deg"
+        rotate="-2deg"
       />
      
 
