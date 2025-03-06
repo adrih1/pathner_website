@@ -105,6 +105,14 @@
         margin-right: 0px;
         margin-bottom: 40px;
         padding: 20px 15px; 
-        min-height: 350px;
+        min-height: 200px;
+    }
+
+    .step_number {
+        font-size: 150px;
+    }
+
+    .description {
+        font-size: 18px;
     }
 }
