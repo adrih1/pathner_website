@@ -47,6 +47,7 @@
 @media (max-width: 600px) {
     .faq_container {
         padding: 5%;
+        text-align: center;
     }
     
     .secondary_title {
