@@ -71,6 +71,12 @@
     z-index: 0;
 }
 
+.description
+{
+    font-size: 20px;
+    z-index: 1;
+}
+
 .icon
 {
     color: var(--white);

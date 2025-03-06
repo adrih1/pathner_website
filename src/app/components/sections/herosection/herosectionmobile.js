@@ -46,8 +46,8 @@ const HeroSectionMobile = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.8"
-        top="70%"
-        right="15%"
+        top="45%"
+        right="5%"
         rotate="2deg"
       />
       <HeroCard 
@@ -55,8 +55,8 @@ const HeroSectionMobile = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.8"
-        top="70%"
-        left="15%"
+        top="50%"
+        left="5%"
         rotate="2deg"
       />
      

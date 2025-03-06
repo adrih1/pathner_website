@@ -54,7 +54,7 @@ const HowItWorksSection = () => {
                 </div>
                 <h3 className={text.third_title}>Sign Up & Browse</h3>
                 
-                <p className={`${text.text} ${text.white}`}>Create your profile and explore a <strong>wide selection</strong> of tours designed by <strong>fellow travelers</strong>. Filter by destination, theme, or interest to find your perfect match.</p>
+                <p className={`${styles.description} ${text.text} ${text.white}`}>Create your profile and explore a <strong>wide selection</strong> of tours designed by <strong>fellow travelers</strong>. Filter by destination, theme, or interest to find your perfect match.</p>
             </motion.div>
             {/* Step Two */}
             <motion.div
@@ -69,7 +69,7 @@ const HowItWorksSection = () => {
                     <p className={styles.step_number} style={{color: '#38573D'}}>2</p>
                 </div>
                 <h3 className={text.third_title}>Build Your Own Tour</h3>
-                <p className={`${text.text} ${text.white}`}>Got a special route or <strong>hidden gem</strong> to share? Use our intuitive interface to craft a <strong>detailed itinerary</strong>, add photos, and set a price.</p>
+                <p className={`${styles.description} ${text.text} ${text.white}`}>Got a special route or <strong>hidden gem</strong> to share? Use our intuitive interface to craft a <strong>detailed itinerary</strong>, add photos, and set a price.</p>
             </motion.div>
             {/* Step Three */}
             <motion.div
@@ -84,7 +84,7 @@ const HowItWorksSection = () => {
                     <p className={styles.step_number} style={{color: '#304B34'}}>3</p>
                 </div>
                 <h3 className={text.third_title}>Earn & Experience</h3>
-                <p className={`${text.text} ${text.white}`}>Each time someone purchases your tour, you <strong>earn money</strong>. Meanwhile, enjoy unlimited access to tours from other creators and <strong>keep discovering new places</strong>.</p>
+                <p className={`${styles.description} ${text.text} ${text.white}`}>Each time someone purchases your tour, you <strong>earn money</strong>. Meanwhile, enjoy unlimited access to tours from other creators and <strong>keep discovering new places</strong>.</p>
             </motion.div>
         </div>
     </section>
