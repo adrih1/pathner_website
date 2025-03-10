@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 // Components
 import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
 import HeroCard from "../../heroelements/herocard/herocard";
-import HeroImage from "../../heroelements/heroimage/heroimage";
 
 // Styles
 import styles from "./herosectionmobile.module.css";

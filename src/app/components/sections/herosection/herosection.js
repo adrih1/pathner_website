@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 // Components
 import EarlyAccessForm from "../../earlyaccessform/EarlyAccessForm";
 import HeroCard from "../../heroelements/herocard/herocard";
-import HeroImage from "../../heroelements/heroimage/heroimage";
 
 // Styles
 import styles from "./herosection.module.css";
@@ -46,6 +45,7 @@ const HeroSection = () => {
         top="30%"
         right="15%"
         rotate="-1deg"
+        disappear={450}
       />
       <HeroCard 
         title="Biking in Île de Ré" 
@@ -55,6 +55,7 @@ const HeroSection = () => {
         top="35%"
         left="15%"
         rotate="-1deg"
+        disappear={450}
       />
 
       {isImageLoaded && (

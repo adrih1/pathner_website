@@ -1,29 +1,45 @@
 "use client";
 
 // Packages
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-// Global Style
-
 
 // Local Style
 import { FaStar } from "react-icons/fa";
 import styles from "./herocard.module.css";
 
-const HeroCard = ({ image, title, city, rating, top, left, right, rotate}) => {
+const HeroCard = ({ image, title, city, rating, top, left, right, rotate, disappear }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (disappear) {
+        const scrollY = window.scrollY;
+        setIsVisible(scrollY < disappear);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [disappear]);
+
   return (
     <motion.div
       className={styles.tour_card}
-      style={{ top: top, left: left, right: right, rotate: rotate }}
-      initial={{ y: 0 }}
-      animate={{ y: [-2, 2, -2] }}
+      style={{
+        top: top,
+        left: left,
+        right: right,
+        rotate: rotate,
+      }}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{
-        duration: 2, // Durée d'une boucle complète
-        repeat: Infinity, // Répéter à l'infini
-        repeatType: "loop", // Type de répétition : "loop", "reverse", ou "mirror"
-        ease: "easeInOut", // Courbe d'accélération
-        delay: 0.2,
+        opacity: { duration: 0.5, ease: "easeInOut" }, // Transition douce pour l'opacité
+        y: { duration: 2, repeat: Infinity, ease: "easeInOut" }, // Animation de rebond
       }}
     >
       <div className={styles.card_content}>
