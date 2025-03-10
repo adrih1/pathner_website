@@ -1,7 +1,7 @@
 "use client";
 
 // Packages
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -15,6 +15,21 @@ import text from "../../../styles/text.module.css";
 
 const HeroSection = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Suivi de l'état de chargement
+  const [isAnimating, setIsAnimating] = useState(true); // Contrôle de l'animation
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Arrête l'animation lorsque le scroll dépasse 400px
+      setIsAnimating(scrollY < 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="home" className={styles.hero}>
@@ -71,16 +86,6 @@ const HeroSection = () => {
               <span style={{color: '#48704F'}}>Reinvent</span> the way you  <span style={{color: '#48704F'}}>explore</span>
             </motion.h1>
 
-            {/* Animation de la description avec un léger délai */}
-            {/* <motion.p
-              className={`${styles.text} ${colors.onPrimary}`}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.7 }}
-            >
-              Turn your knowledge into guided experiences. Join a thriving community of Tour creators and explorers.
-            </motion.p> */}
-
             <motion.div
               className={styles.hero_buttons}
               initial={{ opacity: 0 }}
@@ -102,14 +107,14 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
-          style={{paddingTop: "10px", paddingBottom: "10px"}}
+          style={{ paddingTop: "10px", paddingBottom: "10px" }}
           initial={{ y: 0 }}
-          animate={{ y: [-10, 10, -10] }} // Déplacement en boucle de -10px à 10px
+          animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }} // Contrôle de l'animation
           transition={{
-            duration: 2, // Durée d'une boucle complète
-            repeat: Infinity, // Répéter à l'infini
-            repeatType: "loop", // Type de répétition : "loop", "reverse", ou "mirror"
-            ease: "easeInOut", // Courbe d'accélération
+            duration: 2,
+            repeat: isAnimating ? Infinity : 0, // Arrête la répétition si `isAnimating` est faux
+            repeatType: "loop",
+            ease: "easeInOut",
           }}
         >
           <Image
@@ -127,4 +132,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection ;
+export default HeroSection;
