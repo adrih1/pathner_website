@@ -21,7 +21,7 @@ const HeroSection = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       // Arrête l'animation lorsque le scroll dépasse 400px
-      setIsAnimating(scrollY < 400);
+      setIsAnimating(scrollY < 350);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -60,7 +60,7 @@ const HeroSection = () => {
         top="30%"
         right="15%"
         rotate="-1deg"
-        disappear={450}
+        disappear={400}
       />
       <HeroCard 
         title="Biking in Île de Ré" 
@@ -70,7 +70,7 @@ const HeroSection = () => {
         top="35%"
         left="15%"
         rotate="-1deg"
-        disappear={450}
+        disappear={400}
       />
 
       {isImageLoaded && (
@@ -107,7 +107,7 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
-          style={{ paddingTop: "10px", paddingBottom: "10px" }}
+          style={{margin:"Opx auto", paddingTop: "10px", paddingBottom: "10px", display:"flex", justifyContent:"center", alignItems:"center", width: "100%"}}
           initial={{ y: 0 }}
           animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }} // Contrôle de l'animation
           transition={{
@@ -117,6 +117,9 @@ const HeroSection = () => {
             ease: "easeInOut",
           }}
         >
+          <div className={styles.feature_container}>
+            <h2 className={`${text.secondary_title} ${styles.title}`}>Explore & Enjoy</h2>
+          </div>
           <Image
             src="/herobis.png"
             alt="App's homepage"
@@ -126,6 +129,7 @@ const HeroSection = () => {
             className={styles.hero_image}
             onLoad={() => setIsImageLoaded(true)} // Définir l'état de chargement à "true" une fois l'image chargée
           />
+          <h2 className={`${text.text}`}>Dive into the wonderful itinerary of a unique tour created by a local !</h2>
         </motion.div>
       </div>
     </section>

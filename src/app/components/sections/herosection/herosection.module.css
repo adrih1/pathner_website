@@ -42,13 +42,23 @@
 .hero_right_column
 {
     height: 100%;
-    max-width: 60%;
-    width: auto;
+    width: 100%;
+    max-width: 80%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    max-width: 60%;
     overflow: hidden;
+}
+
+.feature_container
+{
+    min-width: 300px; 
+    max-width: 300px;
+}
+
+.title
+{
+    text-align: left;
 }
 
 .hero_image
