@@ -59,6 +59,13 @@
 .title
 {
     text-align: left;
+    margin-right: 20px;
+}
+
+.description 
+{
+    margin-left: 20px;  
+    text-align: left;  
 }
 
 .hero_image

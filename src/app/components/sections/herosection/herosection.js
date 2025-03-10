@@ -16,12 +16,21 @@ import text from "../../../styles/text.module.css";
 const HeroSection = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Suivi de l'état de chargement
   const [isAnimating, setIsAnimating] = useState(true); // Contrôle de l'animation
+  const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       // Arrête l'animation lorsque le scroll dépasse 400px
       setIsAnimating(scrollY < 350);
+
+      if (scrollY < 450) {
+        setCurrentStep(0);
+      } else if (scrollY >= 500 && scrollY < 800) {
+        console.log('coucou')
+        setCurrentStep(1);
+      } else if (scrollY >= 810 && scrollY < 10000) 
+        setCurrentStep(2);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,6 +39,25 @@ const HeroSection = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const steps = [
+    {
+      title: "Explore & Enjoy",
+      image: "/herobis.png",
+      description: "Dive into the wonderful itinerary of a unique tour created by a local!",
+    },
+    {
+      title: "Adventure Awaits",
+      image: "/dual.png",
+      description: "Cycle through the picturesque scenery of Île de Ré.",
+    },
+    {
+      title: "Discover Hidden Gems",
+      image: "/getstarted.png",
+      description: "Uncover secrets and stories behind street art in Berlin.",
+    },
+  
+  ];
 
   return (
     <section id="home" className={styles.hero}>
@@ -107,9 +135,20 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
-          style={{margin:"Opx auto", paddingTop: "10px", paddingBottom: "10px", display:"flex", justifyContent:"center", alignItems:"center", width: "100%"}}
+          style={{
+            margin: "0px auto",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            position: "sticky",
+            top: "100px",
+            zIndex: 10,
+          }}
           initial={{ y: 0 }}
-          animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }} // Contrôle de l'animation
+          animate={{ y: [-10, 10, -10] }}
           transition={{
             duration: 2,
             repeat: isAnimating ? Infinity : 0, // Arrête la répétition si `isAnimating` est faux
@@ -118,18 +157,22 @@ const HeroSection = () => {
           }}
         >
           <div className={styles.feature_container}>
-            <h2 className={`${text.secondary_title} ${styles.title}`}>Explore & Enjoy</h2>
+            <h2 className={`${text.secondary_title} ${styles.title}`}>
+              {steps[currentStep].title}
+            </h2>
           </div>
           <Image
-            src="/herobis.png"
-            alt="App's homepage"
+            src={steps[currentStep].image}
+            alt={steps[currentStep].title}
             layout="responsive"
             width={400}
             height={700}
             className={styles.hero_image}
-            onLoad={() => setIsImageLoaded(true)} // Définir l'état de chargement à "true" une fois l'image chargée
+            onLoad={() => setIsImageLoaded(true)}
           />
-          <h2 className={`${text.text}`}>Dive into the wonderful itinerary of a unique tour created by a local !</h2>
+          <p className={`${text.text} ${styles.description}`}>
+            {steps[currentStep].description}
+          </p>
         </motion.div>
       </div>
     </section>
