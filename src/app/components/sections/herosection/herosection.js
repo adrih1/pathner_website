@@ -24,11 +24,11 @@ const HeroSection = () => {
       // Arrête l'animation lorsque le scroll dépasse 400px
       setIsAnimating(scrollY < 350);
 
-      if (scrollY < 450) {
+      if (scrollY < 550) {
         setCurrentStep(0);
-      } else if (scrollY >= 550 && scrollY < 650) {
+      } else if (scrollY >= 650 && scrollY < 750) {
         setCurrentStep(1);
-      } else if (scrollY >= 670 && scrollY < 800) 
+      } else if (scrollY >= 800 && scrollY < 900) 
         setCurrentStep(2);
     };
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
   
     {
       title: "Create & Share",
-      image: "/dual.png",
+      image: "/herobis.png",
       description: "Bring your insider knowledge to life with interactive stops and vivid photos. Craft unique tours and let travelers experience the world through your eyes.",
     },
   ];
@@ -143,15 +143,15 @@ const HeroSection = () => {
             ease: "easeInOut",
           }}
           style={{
-            margin: "0px auto",
-            paddingTop: "10px",
-            paddingBottom: "10px",
+            position: "sticky",
+            top: "10px", 
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            position: "sticky",
-            top: "100px",
+            margin: "0px auto",
+            paddingTop: "10px",
+            paddingBottom: "10px",
           }}
         >
           <div className={styles.feature_container}>
