@@ -26,10 +26,9 @@ const HeroSection = () => {
 
       if (scrollY < 450) {
         setCurrentStep(0);
-      } else if (scrollY >= 500 && scrollY < 800) {
-        console.log('coucou')
+      } else if (scrollY >= 550 && scrollY < 650) {
         setCurrentStep(1);
-      } else if (scrollY >= 810 && scrollY < 10000) 
+      } else if (scrollY >= 670 && scrollY < 800) 
         setCurrentStep(2);
     };
 
@@ -47,16 +46,16 @@ const HeroSection = () => {
       description: "Dive into the wonderful itinerary of a unique tour created by a local!",
     },
     {
-      title: "Adventure Awaits",
-      image: "/dual.png",
-      description: "Cycle through the picturesque scenery of Île de Ré.",
-    },
-    {
-      title: "Discover Hidden Gems",
-      image: "/getstarted.png",
-      description: "Uncover secrets and stories behind street art in Berlin.",
+      title: "Earn & Connect",
+      image: "/getstarted_unique.png",
+      description: "Monetize your expertise and join a global community of explorers. Every time someone embarks on your tour, you reap the rewards.",
     },
   
+    {
+      title: "Create & Share",
+      image: "/dual.png",
+      description: "Bring your insider knowledge to life with interactive stops and vivid photos. Craft unique tours and let travelers experience the world through your eyes.",
+    },
   ];
 
   return (
@@ -135,6 +134,14 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
+          initial={{ y: 0 }}
+          animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }}
+          transition={{
+            duration: 2,
+            repeat: isAnimating ? Infinity : 0, 
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
           style={{
             margin: "0px auto",
             paddingTop: "10px",
@@ -145,19 +152,10 @@ const HeroSection = () => {
             width: "100%",
             position: "sticky",
             top: "100px",
-            zIndex: 10,
-          }}
-          initial={{ y: 0 }}
-          animate={{ y: [-10, 10, -10] }}
-          transition={{
-            duration: 2,
-            repeat: isAnimating ? Infinity : 0, // Arrête la répétition si `isAnimating` est faux
-            repeatType: "loop",
-            ease: "easeInOut",
           }}
         >
           <div className={styles.feature_container}>
-            <h2 className={`${text.secondary_title} ${styles.title}`}>
+            <h2 className={`${styles.title} ${text.secondary_title} `}>
               {steps[currentStep].title}
             </h2>
           </div>

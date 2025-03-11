@@ -36,10 +36,10 @@ const HeroCard = ({ image, title, city, rating, top, left, right, rotate, disapp
         rotate: rotate,
       }}
       initial={{ opacity: 1 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: [-3, 3, -3] }}
       transition={{
         opacity: { duration: 0.5, ease: "easeInOut" }, // Transition douce pour l'opacité
-        y: { duration: 2, repeat: Infinity, ease: "easeInOut" }, // Animation de rebond
+        y: { duration: 3, repeat: Infinity, ease: "easeInOut" }, // Animation de rebond
       }}
     >
       <div className={styles.card_content}>
