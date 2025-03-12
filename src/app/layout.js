@@ -3,7 +3,7 @@ import { Provider } from "@/components/ui/provider";
 import { Toaster } from "react-hot-toast"; // Importation de Toaster
 
 export const metadata = {
-  title: "Pathner",
+  title: "RexploR",
   description: "An app to help you find your next adventure",
 };
 

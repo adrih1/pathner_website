@@ -83,7 +83,7 @@ const HeroSection = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.9"
-        top="20%"
+        top="24%"
         right="15%"
         rotate="-1deg"
         disappear={400}
@@ -93,7 +93,7 @@ const HeroSection = () => {
         city = "La Couarde"
         image="/tour_cards_cover/velo.webp"
         rating="4.1"
-        top="18%"
+        top="20%"
         left="15%"
         rotate="-1deg"
         disappear={400}
@@ -155,9 +155,16 @@ const HeroSection = () => {
           }}
         >
           <div className={styles.feature_container}>
-            <h2 className={`${styles.title} ${text.secondary_title} `}>
-              {steps[currentStep].title}
-            </h2>
+          <motion.h2
+            key={steps[currentStep].title} // Change le contenu en fonction de l'étape
+            className={`${styles.title} ${text.secondary_title}`}
+            initial={{ opacity: 0, y: -10}}
+            animate={{ opacity: 1, y : 0 }}
+            exit={{ opacity: 0, y : 0 }}
+            transition={{ duration: 1 }} // Durée de la transition
+          >
+            {steps[currentStep].title}
+          </motion.h2>
           </div>
           <Image
             src={steps[currentStep].image}
@@ -168,9 +175,16 @@ const HeroSection = () => {
             className={styles.hero_image}
             onLoad={() => setIsImageLoaded(true)}
           />
-          <p className={`${text.text} ${styles.description}`}>
+         <motion.p
+            key={steps[currentStep].description} // Change le contenu en fonction de l'étape
+            className={`${text.text} ${styles.description}`}
+            initial={{ opacity: 0, y: -10}}
+            animate={{ opacity: 1, y : 0 }}
+            exit={{ opacity: 0, y : 0 }}
+            transition={{ duration: 1 }}
+          >
             {steps[currentStep].description}
-          </p>
+          </motion.p>
         </motion.div>
       </div>
     </section>
