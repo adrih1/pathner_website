@@ -7,9 +7,9 @@
     justify-content: center;
     flex-direction: column;
     padding: 10%;
+    padding-bottom: 0px;
     text-align: center;
     min-height: 100vh;
-    overflow: hidden;
 }
   
 .hero_left_column {
@@ -39,17 +39,18 @@
     max-width: 800px;
 }
 
-.hero_right_column
-{
+
+.hero_right_column {
     position: relative;
-    height: 100vh;
+    height: 200vh; 
     width: 100%;
     max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow: hidden;
+    flex-direction: row;
 }
+
 
 .feature_container
 {

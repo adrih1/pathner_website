@@ -60,7 +60,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className={styles.hero}>
-      {/* Elements to be placed via calculation */}
       <HeroCard 
         title="Secrets of Street Art" 
         city = "Berlin"
@@ -84,7 +83,7 @@ const HeroSection = () => {
         city = "Nîmes"
         image="/tour_cards_cover/nimes.jpg"
         rating="4.9"
-        top="30%"
+        top="20%"
         right="15%"
         rotate="-1deg"
         disappear={400}
@@ -94,7 +93,7 @@ const HeroSection = () => {
         city = "La Couarde"
         image="/tour_cards_cover/velo.webp"
         rating="4.1"
-        top="35%"
+        top="18%"
         left="15%"
         rotate="-1deg"
         disappear={400}
@@ -134,6 +133,7 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
+          id="regardecettediv"
           initial={{ y: 0 }}
           animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }}
           transition={{
