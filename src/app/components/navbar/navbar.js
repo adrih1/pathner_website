@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>
-        <a href="#home">RexploR</a>
+        <a href="#home">rexplor</a>
       </div>
       <div className={styles.nav_links}>
         <a onClick={() => scrollToSection("about-us")} className={styles.nav_link}>About Us</a>

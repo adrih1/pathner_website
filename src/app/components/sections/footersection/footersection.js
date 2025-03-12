@@ -29,7 +29,7 @@ const FooterSection = () => {
           <p className={styles.footer_link}>Help & Support</p>
         </div>
         <div className={styles.footer_links_right}>
-          <p className={styles.footer_link}>All rights reserved, © RexploR</p>
+          <p className={styles.footer_link}>All rights reserved, © rexplor</p>
         </div>
       </div>
     </footer>

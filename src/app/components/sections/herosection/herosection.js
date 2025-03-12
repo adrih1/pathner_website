@@ -26,9 +26,9 @@ const HeroSection = () => {
 
       if (scrollY < 550) {
         setCurrentStep(0);
-      } else if (scrollY >= 650 && scrollY < 750) {
+      } else if (scrollY >= 700 && scrollY < 900) {
         setCurrentStep(1);
-      } else if (scrollY >= 800 && scrollY < 900) 
+      } else if (scrollY >= 950 && scrollY < 1050) 
         setCurrentStep(2);
     };
 
@@ -133,7 +133,6 @@ const HeroSection = () => {
           </div>
         )}
         <motion.div
-          id="regardecettediv"
           initial={{ y: 0 }}
           animate={isAnimating ? { y: [-10, 10, -10] } : { y: 0 }}
           transition={{
@@ -154,17 +153,17 @@ const HeroSection = () => {
             paddingBottom: "10px",
           }}
         >
-          <div className={styles.feature_container}>
-          <motion.h2
-            key={steps[currentStep].title} // Change le contenu en fonction de l'étape
-            className={`${styles.title} ${text.secondary_title}`}
-            initial={{ opacity: 0, y: -10}}
-            animate={{ opacity: 1, y : 0 }}
-            exit={{ opacity: 0, y : 0 }}
-            transition={{ duration: 1 }} // Durée de la transition
-          >
-            {steps[currentStep].title}
-          </motion.h2>
+          <div className={styles.title_container}>
+            <motion.h2
+              key={steps[currentStep].title} // Change le contenu en fonction de l'étape
+              className={`${styles.title} ${text.secondary_title}`}
+              initial={{ opacity: 0, y: -10}}
+              animate={{ opacity: 1, y : 0 }}
+              exit={{ opacity: 0, y : 0 }}
+              transition={{ duration: 1 }} // Durée de la transition
+            >
+              {steps[currentStep].title}
+            </motion.h2>
           </div>
           <Image
             src={steps[currentStep].image}

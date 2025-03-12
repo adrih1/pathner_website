@@ -30,7 +30,7 @@ export default async function handler(req, res) {
             const userMailOptions = {
                 from: process.env.EMAIL_USER,
                 to: email, // L'email de l'utilisateur
-                subject: 'Bienvenue sur RexploR !',
+                subject: 'Bienvenue sur rexplor !',
                 text: `Bonjour et merci de nous rejoindre ! Nous sommes ravis de vous avoir avec nous. Vous serez parmi les premiers informés de nos actualités.`,
                 html: `<p>Bonjour et merci de nous rejoindre !</p>
                        <p>Nous sommes ravis de vous avoir avec nous. Vous serez les premiers informés de nos actualités.</p>`,
